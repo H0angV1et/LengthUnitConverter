@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f3f3f3"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="411dp"
+        android:layout_height="71dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="97dp"
+        android:text="@string/txt_input"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/edit_input"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_input"
+        android:layout_width="225dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginEnd="16dp"
+        android:padding="10dp"
+        android:autofillHints=""
+        android:background="@drawable/number_field_background"
+        android:ems="10"
+        android:hint="@string/edit_input"
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_unit_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/txt_unit_from"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/spinner_unit_from"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text_input"
+        app:layout_constraintTop_toBottomOf="@+id/text_input" />
+
+    <Spinner
+        android:id="@+id/spinner_unit_from"
+        android:layout_width="255dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:entries="@array/unitLength"
+        android:color="@color/black"
+        android:background="@drawable/spinner_background"
+        app:layout_constraintEnd_toEndOf="@+id/edit_input"
+        app:layout_constraintTop_toBottomOf="@+id/edit_input" />
+
+    <TextView
+        android:id="@+id/text_unit_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/txt_unit_to"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/spinner_unit_to"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/text_unit_from"
+        app:layout_constraintTop_toBottomOf="@+id/text_unit_from" />
+
+    <Spinner
+        android:id="@+id/spinner_unit_to"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:color="@color/black"
+        android:entries="@array/unitLength"
+        android:background="@drawable/spinner_background"
+        app:layout_constraintEnd_toEndOf="@+id/spinner_unit_from"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_unit_from" />
+
+    <TextView
+        android:id="@+id/text_output"
+        android:layout_width="380dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:background="@drawable/number_field_background"
+        android:gravity="center|start"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_unit_to"/>
+
+    <Button
+        android:id="@+id/button_swap"
+        android:layout_width="185dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_background"
+        android:text="@string/btn_swap"
+        app:layout_constraintStart_toStartOf="@+id/text_output"
+        app:layout_constraintTop_toBottomOf="@+id/text_output" />
+
+    <Button
+        android:id="@+id/button_clear"
+        android:layout_width="185dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_background"
+        android:text="@string/btn_clear"
+        app:layout_constraintEnd_toEndOf="@+id/text_output"
+        app:layout_constraintTop_toBottomOf="@+id/text_output" />
+
+    <TextView
+        android:id="@+id/text_decimal_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/txt_decimal_change"
+        app:layout_constraintStart_toStartOf="@+id/button_swap"
+        app:layout_constraintTop_toBottomOf="@+id/button_swap" />
+
+    <SeekBar
+        android:id="@+id/seekBar_decimal_change"
+        android:layout_width="220dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="24dp"
+        android:max="6"
+        android:thumbTint="#00d8c5"
+        android:progressTint="#00d8c5"
+        app:layout_constraintEnd_toEndOf="@+id/button_clear"
+        app:layout_constraintTop_toBottomOf="@+id/button_clear" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

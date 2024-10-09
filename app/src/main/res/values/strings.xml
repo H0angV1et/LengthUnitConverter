@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Length Converter</string>
+    <string name="txt_input">Enter the length</string>
+    <string name="edit_input">Enter here : </string>
+    <string name="txt_unit_from">Length From</string>
+    <string name="txt_unit_to">Length To</string>
+    <string name="btn_swap">SWAP</string>
+    <string name="btn_clear">CLEAR</string>
+    <string name="txt_decimal_change">Decimal Precision:</string>
+    <string-array name="unitLength">
+        <item>Centimeters (cm)</item>
+        <item>Meters (m)</item>
+        <item>Kilometers (km)</item>
+        <item>Millimeters (mm)</item>
+        <item>Inches (in)</item>
+        <item>Foot (ft)</item>
+        <item>Yards (yd)</item>
+        <item>Miles (ml)</item>
+    </string-array>
+</resources>
