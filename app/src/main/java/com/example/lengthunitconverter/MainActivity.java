@@ -106,26 +106,14 @@ public class MainActivity extends AppCompatActivity {
         if (!getUnitFrom.isEmpty() && !getUnitTo.isEmpty()) {
             double convertedNumber = Double.parseDouble(inputNumber);
             switch(getUnitFrom) {
-                case "Centimeters (cm)":
-                    setKm(convertedNumber / 100000, getUnitTo, progress);
-                    break;
                 case "Meters (m)":
                     setKm(convertedNumber / 1000, getUnitTo, progress);
-                    break;
-                case "Kilometers (km)":
-                    setKm(convertedNumber, getUnitTo, progress);
                     break;
                 case "Millimeters (mm)":
                     setKm(convertedNumber / 1000000, getUnitTo, progress);
                     break;
-                case "Inches (in)":
-                    setKm(convertedNumber / 39370.07874, getUnitTo, progress);
-                    break;
                 case "Foot (ft)":
                     setKm(convertedNumber / 3280.839895, getUnitTo, progress);
-                    break;
-                case "Yards (yd)":
-                    setKm(convertedNumber / 1093.6132983, getUnitTo, progress);
                     break;
                 case "Miles (ml)":
                     setKm(convertedNumber / 0.6213711922, getUnitTo, progress);
@@ -138,32 +126,16 @@ public class MainActivity extends AppCompatActivity {
         BigDecimal outputNumber;
 
         switch(getUnitTo) {
-            case "Centimeters (cm)":
-                outputNumber = new BigDecimal(convertedNumber * 100000).setScale(
-                        progress, RoundingMode.HALF_UP);
-                break;
             case "Meters (m)":
                 outputNumber = new BigDecimal(convertedNumber * 1000).setScale(
-                        progress, RoundingMode.HALF_UP);
-                break;
-            case "Kilometers (km)":
-                outputNumber = new BigDecimal(convertedNumber).setScale(
                         progress, RoundingMode.HALF_UP);
                 break;
             case "Millimeters (mm)":
                 outputNumber = new BigDecimal(convertedNumber * 1000000).setScale(
                         progress, RoundingMode.HALF_UP);
                 break;
-            case "Inches (in)":
-                outputNumber = new BigDecimal(convertedNumber * 39370.07874).setScale(
-                        progress, RoundingMode.HALF_UP);
-                break;
             case "Foot (ft)":
                 outputNumber = new BigDecimal(convertedNumber * 3280.839895).setScale(
-                        progress, RoundingMode.HALF_UP);
-                break;
-            case "Yards (yd)":
-                outputNumber = new BigDecimal(convertedNumber * 1093.6132983).setScale(
                         progress, RoundingMode.HALF_UP);
                 break;
             case "Miles (ml)":
@@ -171,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
                         progress, RoundingMode.HALF_UP);
                 break;
             default:
-                outputNumber = new BigDecimal(0); // Trường hợp không xác định
+                outputNumber = new BigDecimal(0);
                 break;
         }
         textOutput.setText(String.valueOf(outputNumber));

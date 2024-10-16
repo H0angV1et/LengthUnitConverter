@@ -8,13 +8,9 @@
     <string name="btn_clear">CLEAR</string>
     <string name="txt_decimal_change">Decimal Precision:</string>
     <string-array name="unitLength">
-        <item>Centimeters (cm)</item>
         <item>Meters (m)</item>
-        <item>Kilometers (km)</item>
         <item>Millimeters (mm)</item>
-        <item>Inches (in)</item>
         <item>Foot (ft)</item>
-        <item>Yards (yd)</item>
         <item>Miles (ml)</item>
     </string-array>
 </resources>
